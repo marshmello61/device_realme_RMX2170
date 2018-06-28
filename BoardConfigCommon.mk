@@ -133,5 +133,10 @@ TARGET_USES_MKE2FS := true
 # RenderScript
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
+# Verified Boot
+BOARD_AVB_ENABLE := true
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
+
 # Inherit from the proprietary version
 -include vendor/realme/sm7125-common/BoardConfigVendor.mk
