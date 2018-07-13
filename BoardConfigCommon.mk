@@ -136,6 +136,9 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
 # RenderScript
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
+# RIL
+TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
