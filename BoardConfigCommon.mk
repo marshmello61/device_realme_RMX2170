@@ -74,6 +74,9 @@ TARGET_USE_QTI_BT_STACK := true
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
 
+# Display
+TARGET_SCREEN_DENSITY := 480
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
