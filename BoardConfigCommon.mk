@@ -156,6 +156,7 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 # SEPolicy
 include device/qcom/sepolicy/SEPolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/public
 TARGET_USES_PREBUILT_VENDOR_SEPOLICY := true
 
 # Verified Boot
