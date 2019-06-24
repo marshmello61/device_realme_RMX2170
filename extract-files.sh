@@ -63,6 +63,9 @@ function blob_fixup() {
         system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml)
             sed -i "s/my_product/system_ext/" "${2}"
             ;;
+        system_ext/lib64/libwfdnative.so)
+            sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
+            ;;
     esac
 }
 
