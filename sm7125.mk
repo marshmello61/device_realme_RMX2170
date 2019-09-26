@@ -68,6 +68,10 @@ PRODUCT_PACKAGES += \
     vendor.display.config@2.0 \
     vendor.qti.hardware.display.composer@3.0
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service.realme_sm7125
+
 # Framework detect
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
@@ -102,6 +106,10 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-aosp
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml
 
 # Ramdisk && init script
 PRODUCT_PACKAGES += \
