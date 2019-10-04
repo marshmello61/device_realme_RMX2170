@@ -92,7 +92,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.RMX2170
+    android.hardware.biometrics.fingerprint@2.1-service.RMX2170 \
+    lineage.biometrics.fingerprint.inscreen@1.0-service.RMX2170
 
 # Framework detect
 PRODUCT_PACKAGES += \
