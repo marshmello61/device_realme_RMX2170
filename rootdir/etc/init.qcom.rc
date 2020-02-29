@@ -90,6 +90,9 @@ on post-fs-data
     mount none /system/lib/hw/android.hardware.sensors@1.0-impl.rmx2170.so /vendor/lib/hw/android.hardware.sensors@1.0-impl.so bind
     mount none /system/lib64/hw/android.hardware.sensors@1.0-impl.rmx2170.so /vendor/lib64/hw/android.hardware.sensors@1.0-impl.so bind
 
+    # Force camera HAL to expose all cameras
+    setprop oppo.camera.packname com.oppo.camera
+
 service boot_lc /system/bin/logcat -b all -D -f /cache/boot_lc_full.txt
     class main
     user root
@@ -128,4 +131,3 @@ on property:sys.boot_completed=1
 on property:persist.sys.device_provisioned=1
     setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,7
     setprop dalvik.vm.dex2oat-threads 6
-
