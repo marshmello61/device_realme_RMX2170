@@ -24,3 +24,6 @@ on post-fs-data
 
     # Disable all overlays present at vendor
     mount none /vendor/lost+found /vendor/overlay bind
+    
+    # Force camera HAL to expose all cameras
+    setprop oppo.camera.packname com.oppo.camera
