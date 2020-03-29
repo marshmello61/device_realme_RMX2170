@@ -11,9 +11,6 @@ on late-fs
 on property:init.svc.face_hal=restarting
     stop face_hal
 
-on post-fs-data
-    # Disable all overlays present at vendor
-    mount none /vendor/lost+found /vendor/overlay bind
-    
+on post-fs-data    
     # Force camera HAL to expose all cameras
     setprop oppo.camera.packname com.oppo.camera
