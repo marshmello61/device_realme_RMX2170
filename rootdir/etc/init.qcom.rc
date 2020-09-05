@@ -1,3 +1,8 @@
+on late-fs
+
+on property:init.svc.face_hal=restarting
+    stop face_hal
+
 on post-fs-data
     # Override audio configurations
     mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio/audio_policy_configuration.xml bind
