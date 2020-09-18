@@ -1,4 +1,4 @@
-service vendor.light-qti /vendor/bin/hw/android.hardware.lights-service.qti
+service vendor.light /vendor/bin/hw/android.hardware.lights-service.qti
     class hal
     user system
     group system
