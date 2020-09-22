@@ -27,6 +27,9 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a76
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
+# Build rules
+BUILD_BROKEN_DUP_RULES := true
+
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
