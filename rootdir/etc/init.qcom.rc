@@ -3,11 +3,6 @@ on init
     mkdir -p /vendor/odm
     mount none /odm /vendor/odm bind
 
-on late-fs
-
-on property:init.svc.face_hal=restarting
-    stop face_hal
-
 on post-fs-data    
     # Force camera HAL to expose all cameras
     setprop oppo.camera.packname com.oppo.camera
