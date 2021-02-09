@@ -34,7 +34,7 @@
 
 #<src>                                                 <mnt_point>               <type>  <mnt_flags and options>                            <fs_mgr_flags>
 # Core dynamic partitions
-odm                                                    /odm                      ext4    ro,barrier=1                                       wait,logical,first_stage_mount,avb_keys=/vendor/etc/oplus_avb.pubkey,nofail
+odm                                                    /odm                      ext4    ro,barrier=1,discard                               wait,logical,first_stage_mount
 
 # Core partitions
 /dev/block/by-name/opporeserve2                        /mnt/vendor/opporeserve   ext4    nosuid,nodev,noatime,barrier=1                     wait,check,first_stage_mount,nofail
