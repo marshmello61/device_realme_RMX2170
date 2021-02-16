@@ -40,6 +40,9 @@ my_engineering                                         /mnt/vendor/my_engineerin
 my_company                                             /mnt/vendor/my_company    ext4    ro,barrier=1                                       wait,logical,first_stage_mount,avb_keys=/vendor/etc/oplus_avb.pubkey,nofail
 my_carrier                                             /mnt/vendor/my_carrier    ext4    ro,barrier=1                                       wait,logical,first_stage_mount,avb_keys=/vendor/etc/oplus_avb.pubkey,nofail
 my_region                                              /mnt/vendor/my_region     ext4    ro,barrier=1                                       wait,logical,first_stage_mount,avb_keys=/vendor/etc/oplus_avb.pubkey,nofail
+my_heytap                                              /mnt/vendor/my_heytap     ext4    ro,barrier=1                                       wait,logical,first_stage_mount,avb_keys=/vendor/etc/oplus_avb.pubkey,nofail
+my_stock                                               /mnt/vendor/my_stock      ext4    ro,barrier=1                                       wait,logical,first_stage_mount,avb_keys=/vendor/etc/oplus_avb.pubkey,nofail
+my_preload                                             /mnt/vendor/my_preload    ext4    ro,barrier=1                                       wait,logical,first_stage_mount,avb_keys=/vendor/etc/oplus_avb.pubkey,nofail
 my_manifest                                            /mnt/vendor/my_manifest   ext4    ro,barrier=1                                       wait,logical,first_stage_mount,avb_keys=/vendor/etc/oplus_avb.pubkey,nofail
 
 # Core partitions
@@ -48,6 +51,9 @@ my_manifest                                            /mnt/vendor/my_manifest  
 /mnt/vendor/my_company                                 /my_company               none    ro,bind                                            wait,nofail,first_stage_mount,nofail
 /mnt/vendor/my_carrier                                 /my_carrier               none    ro,bind                                            wait,nofail,first_stage_mount,nofail
 /mnt/vendor/my_region                                  /my_region                none    ro,bind                                            wait,nofail,first_stage_mount,nofail
+/mnt/vendor/my_heytap                                  /my_heytap                none    ro,bind                                            wait,nofail,first_stage_mount,nofail
+/mnt/vendor/my_stock                                   /my_stock                 none    ro,bind                                            wait,nofail,first_stage_mount,nofail
+/mnt/vendor/my_preload                                 /my_preload               none    ro,bind                                            wait,nofail,first_stage_mount,nofail
 /mnt/vendor/my_manifest                                /my_manifest              none    ro,bind                                            wait,nofail,first_stage_mount,nofail
 /dev/block/by-name/opporeserve2                        /mnt/vendor/opporeserve   ext4    nosuid,nodev,noatime,barrier=1                     wait,check,first_stage_mount,nofail
 /dev/block/bootdevice/by-name/custom                   /my_custom                ext4    ro,barrier=1,discard                               wait
