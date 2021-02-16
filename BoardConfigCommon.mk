@@ -147,6 +147,7 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # SEPolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
