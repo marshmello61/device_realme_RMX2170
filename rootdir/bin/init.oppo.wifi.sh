@@ -204,7 +204,7 @@ fi
 chmod 666 /mnt/vendor/persist/bdwlan.bin
 chown system:wifi /mnt/vendor/persist/bdwlan.bin
 
-sourceFile=/my_product/vendor/etc/wifi/WCNSS_qcom_cfg.ini
+sourceFile=/vendor/etc/wifi/WCNSS_qcom_cfg.ini
 targetFile=/mnt/vendor/persist/wlan/WCNSS_qcom_cfg.ini
 
 #Yuan.Huang@PSW.CN.Wifi.Network.internet.1065227, 2016/11/09,

@@ -103,9 +103,9 @@ function switchWiFiIniForRoam() {
     fi
 
     if [ "0" == "$wifiRoamEnable" ]; then
-        srcFile="/my_product/vendor/etc/wifi/WCNSS_qcom_cfg_cmcc.ini"
+        srcFile="/vendor/etc/wifi/WCNSS_qcom_cfg_cmcc.ini"
     else
-        srcFile="/my_product/vendor/etc/wifi/WCNSS_qcom_cfg.ini"
+        srcFile="/vendor/etc/wifi/WCNSS_qcom_cfg.ini"
     fi
 
     # check whether file have been modified, should this can happen?
