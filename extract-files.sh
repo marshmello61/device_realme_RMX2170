@@ -58,6 +58,14 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup() {
+    case "${1}" in
+        system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml)
+            sed -i "s/my_product/system_ext/" "${2}"
+            ;;
+    esac
+}
+
 if [ -z "${ONLY_TARGET}" ]; then
     # Initialize the helper for common device
     setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
