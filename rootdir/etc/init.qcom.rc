@@ -1,3 +1,8 @@
+on init
+    # Override fstabs
+    mount none /system/etc/fstab.at.qcom /vendor/etc/fstab.at.qcom bind
+    mount none /system/etc/oplus.fstab /odm/etc/oplus.fstab bind  
+
 on late-fs
 
 on property:init.svc.face_hal=restarting

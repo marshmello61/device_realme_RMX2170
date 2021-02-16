@@ -125,6 +125,8 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk && init script
 PRODUCT_PACKAGES += \
+    fstab.at.qcom \
+    oplus.fstab \
     init.qcom.rc
 
 PRODUCT_COPY_FILES += \
