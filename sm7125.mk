@@ -127,7 +127,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.at.qcom \
     oplus.fstab \
-    init.qcom.rc
+    init.qcom.rc \
+    init.oppo.wifi.sh \
+    vendor.autochmod.sh
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/ramdisk/,$(TARGET_COPY_OUT_RAMDISK))

@@ -3,6 +3,10 @@ on init
     mount none /system/etc/fstab.at.qcom /vendor/etc/fstab.at.qcom bind
     mount none /system/etc/oplus.fstab /odm/etc/oplus.fstab bind  
 
+    # Override wifi oppo script
+    mount none /system/bin/init.oppo.wifi.sh /odm/bin/init.oppo.wifi.sh bind
+    mount none /system/bin/vendor.autochmod.sh /odm/bin/vendor.autochmod.sh bind
+
 on late-fs
 
 on property:init.svc.face_hal=restarting
