@@ -286,7 +286,9 @@ system_ext/lib64/vendor.qti.ims.rcsconfig@1.1.so
 system_ext/lib64/vendor.qti.ims.rcsconfig@2.0.so
 system_ext/lib64/vendor.qti.ims.rcsconfig@2.1.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
--system_ext/priv-app/ims/ims.apk
+
+# IMS - from qssi-user-11-RKQ1.200826.002-V12.0.3.0.RJWINXM-release-keys
+-system_ext/priv-app/ims/ims.apk|9f0a48f1f6f0d23b558c659c9658f3913a8ce185
 
 # GPS
 system_ext/bin/qccsyshalservice
@@ -391,7 +393,6 @@ etc/sysconfig/qti_whitelist.xml
 system_ext/etc/permissions/privapp-permissions-qti-system-ext.xml
 system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
--system_ext/app/atfwd/atfwd.apk
 -system_ext/app/datastatusnotification/datastatusnotification.apk
 -system_ext/app/embms/embms.apk
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
@@ -416,7 +417,6 @@ system_ext/etc/permissions/uimremoteserver.xml
 system_ext/etc/permissions/UimService.xml
 -system_ext/framework/embmslibrary.jar
 -system_ext/framework/qcrilhook.jar
--system_ext/framework/qti-telephony-common.jar
 -system_ext/framework/qti-telephony-hidl-wrapper.jar
 -system_ext/framework/qti-telephony-utils.jar
 -system_ext/framework/remotesimlockmanagerlibrary.jar
@@ -479,6 +479,10 @@ system_ext/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
 system_ext/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 system_ext/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+
+# Telephony - from qssi-user-11-RKQ1.200826.002-V12.0.3.0.RJWINXM-release-keys
+-system_ext/app/atfwd/atfwd.apk|4ba13ce5e75881b8d917a1e143aa81f14d883996
+-system_ext/framework/qti-telephony-common.jar|6fe866abf570b6ee05cf333d95123124da9bddbe
 
 # Sensors
 -system_ext/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
