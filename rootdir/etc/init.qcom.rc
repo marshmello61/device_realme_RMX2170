@@ -24,6 +24,3 @@ on post-fs-data
 
     # Disable all overlays present at vendor
     mount none /vendor/lost+found /vendor/overlay bind
-
-on property:sys.boot_completed=1
-    setprop vendor.oppo.biometrics.fingerprint.boot_completed 1
