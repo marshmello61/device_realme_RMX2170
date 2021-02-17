@@ -123,12 +123,14 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml
 
-# Ramdisk && init script
+# Ramdisk && rootdir
 PRODUCT_PACKAGES += \
     fstab.at.qcom \
     oplus.fstab \
-    init.qcom.rc \
     init.oppo.wifi.sh \
+    init.qcom.rc \
+    init.recovery.qcom.rc \
+    init.recovery.qcom.sh \
     vendor.autochmod.sh
 
 PRODUCT_COPY_FILES += \
