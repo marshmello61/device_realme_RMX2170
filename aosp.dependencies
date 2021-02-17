@@ -1,0 +1,14 @@
+[
+ {
+    "repository" : "realme-sm7125/vendor_realme_sm7125-common",
+    "target_path": "vendor/realme/sm7125-common",
+    "remote"     : "github",
+    "revision"   : "eleven"
+ },
+ {
+    "repository" : "realme-sm7125/hardware_oplus",
+    "target_path": "hardware/oplus",
+    "remote"     : "github",
+    "revision"   : "eleven"
+ }
+]
