@@ -51,6 +51,9 @@ ro.vendor.display.sensortype=2
 ro.vendor.display.svi=1
 vendor.display.svi.config=1
 
+# GBoard Spacing
+ro.com.google.ime.kb_pad_port_b=1
+
 # IMS
 persist.dbg.ims_volte_enable=1
 persist.dbg.volte_avail_ovr=1
