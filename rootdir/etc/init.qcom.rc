@@ -1,6 +1,6 @@
 on init
     # Override fstabs
-    mount none /system/etc/fstab.at.qcom /vendor/etc/fstab.at.qcom bind
+    mount none /system/etc/fstab.default /vendor/etc/fstab.default bind
     mount none /system/etc/oplus.fstab /odm/etc/oplus.fstab bind  
 
     # Override wifi oppo script

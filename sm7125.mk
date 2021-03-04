@@ -145,7 +145,7 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk && rootdir
 PRODUCT_PACKAGES += \
-    fstab.at.qcom \
+    fstab.default \
     oplus.fstab \
     init.oppo.wifi.sh \
     init.qcom.rc \
