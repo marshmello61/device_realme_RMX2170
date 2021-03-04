@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from RMX2170L1-user 11 RKQ1.200903.002 1607512793182 release-keys (RealmeUI V2.0 C.15)
+# All unpinned blobs below are extracted from RMX2170L1-user 11 RKQ1.200903.002 1610790354385 release-keys (RealmeUI V2.0 C.17)
 
 # ADSP Modules
 system_ext/lib/rfsa/adsp/libdsp_streamer_qvrcam_receiver.so
