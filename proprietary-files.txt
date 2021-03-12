@@ -486,6 +486,10 @@ system_ext/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 -system_ext/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
 system_ext/lib/libsensor_calibration.so
 
+# USB - from atoll-user-10-RMX2170_11_A.30-release-keys
+vendor/bin/hw/android.hardware.usb@1.0-service:bin/hw/android.hardware.usb@1.0-service|6441cf7dab06a28c16767d485c530a909d6bbe2c
+vendor/etc/init/android.hardware.usb@1.0-service.rc:etc/init/android.hardware.usb@1.0-service.rc|2981a5248a0736d882a0b6ac24dd8c2d80878f77
+
 # VR
 system_ext/lib/libvr_amb_engine.so
 system_ext/lib/libvr_object_engine.so
