@@ -6,12 +6,6 @@
     "revision"   : "eleven"
  },
  {
-    "repository" : "realme-sm7125/vendor_realme-firmware",
-    "target_path": "vendor/realme/firmware",
-    "remote"     : "gitlab",
-    "revision"   : "eleven"
- },
- {
     "repository" : "realme-sm7125/hardware_oplus",
     "target_path": "hardware/oplus",
     "remote"     : "github",
