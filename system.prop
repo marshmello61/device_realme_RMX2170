@@ -78,5 +78,8 @@ ro.vendor.use_data_netmgrd=true
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
+# Time
+persist.timed.enable=true
+
 # Vendor
 ro.vendor.qti.va_aosp.support=1
