@@ -1,6 +1,5 @@
 on init
-    # Override fstabs
-    mount none /system/etc/fstab.default /vendor/etc/fstab.default bind
+    # Override OPLUS fstab
     mount none /system/etc/oplus.fstab /odm/etc/oplus.fstab bind  
 
     # Override wifi oppo script
@@ -13,15 +12,6 @@ on property:init.svc.face_hal=restarting
     stop face_hal
 
 on post-fs-data
-    # Override audio configurations
-    mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio/audio_policy_configuration.xml bind
-    mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio_policy_configuration.xml bind
-    mount none /system/etc/audio_policy_volumes.xml /vendor/etc/audio_policy_volumes.xml bind
-    mount none /system/etc/default_volume_tables.xml /vendor/etc/default_volume_tables.xml bind
-
-    # Override wifi configuration
-    mount none /system/etc/wifi/WCNSS_qcom_cfg.ini /vendor/etc/wifi/WCNSS_qcom_cfg.ini bind
-
     # Disable all overlays present at vendor
     mount none /vendor/lost+found /vendor/overlay bind
     

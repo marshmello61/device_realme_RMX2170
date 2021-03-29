@@ -38,9 +38,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio.a2dp.default
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_policy_configuration.xml
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     BluetoothQti \
@@ -147,13 +144,12 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk && rootdir
 PRODUCT_PACKAGES += \
-    fstab.default \
     oplus.fstab \
     init.oppo.wifi.sh \
-    init.qcom.rc \
-    init.recovery.qcom.rc \
     init.recovery.qcom.sh \
-    vendor.autochmod.sh
+    vendor.autochmod.sh \
+    init.qcom.rc \
+    init.recovery.qcom.rc
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/ramdisk/,$(TARGET_COPY_OUT_RAMDISK))
@@ -193,12 +189,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0
 
+# Vendor Overlays
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/vendor-overlay/,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION))
+
 # WiFi
 PRODUCT_PACKAGES += \
     WifiOverlay
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_SYSTEM)/etc/wifi/WCNSS_qcom_cfg.ini
 
 # WiFi Display
 PRODUCT_PACKAGES += \
