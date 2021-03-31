@@ -90,7 +90,7 @@ TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_realme_sm7125
+TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_realme_sm7125
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
