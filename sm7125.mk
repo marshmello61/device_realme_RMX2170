@@ -148,10 +148,7 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk && rootdir
 PRODUCT_PACKAGES += \
-    oplus.fstab \
-    init.oppo.wifi.sh \
     init.recovery.qcom.sh \
-    vendor.autochmod.sh \
     init.qcom.rc \
     init.recovery.qcom.rc
 

@@ -1,6 +1,11 @@
 # HALs
 /(product|system/product)/vendor_overlay/[0-9]+/bin/hw/android\.hardware\.lights-service\.qti    u:object_r:hal_light_default_exec:s0
 
+# Odm overlay
+/(product|system/product)/vendor_overlay/[0-9]+/odm/bin/init\.oppo\.wifi\.sh        u:object_r:vendor_qti_init_shell_exec:s0
+/(product|system/product)/vendor_overlay/[0-9]+/odm/bin/vendor\.autochmod\.sh       u:object_r:vendor_autochmod_exec:s0
+/(product|system/product)/vendor_overlay/[0-9]+/odm/etc(/.*)?                       u:object_r:vendor_configs_file:s0
+
 # Vendor overlay
 /(product|system/product)/vendor_overlay/[0-9]+/etc(/.*)?        u:object_r:vendor_configs_file:s0
 /(product|system/product)/vendor_overlay/[0-9]+/overlay(/.*)?    u:object_r:vendor_overlay_file:s0

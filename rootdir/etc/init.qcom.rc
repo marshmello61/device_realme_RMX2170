@@ -1,10 +1,7 @@
 on init
-    # Override OPLUS fstab
-    mount none /system/etc/oplus.fstab /odm/etc/oplus.fstab bind  
-
-    # Override wifi oppo script
-    mount none /system/bin/init.oppo.wifi.sh /odm/bin/init.oppo.wifi.sh bind
-    mount none /system/bin/vendor.autochmod.sh /odm/bin/vendor.autochmod.sh bind
+    # Bind mount /odm to /vendor/odm for allow using vendor_overlay
+    mkdir -p /vendor/odm
+    mount none /odm /vendor/odm bind
 
 on late-fs
 
