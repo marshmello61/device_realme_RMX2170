@@ -5,8 +5,3 @@ service fps_hal.realme_sm7125 /system/bin/hw/android.hardware.biometrics.fingerp
     class late_start
     user system
     group system input uhid
-
-service oppo_fingerprints_sh /vendor/bin/sh /odm/bin/init.oppo.fingerprints.sh
-    class main
-    user root
-    oneshot
