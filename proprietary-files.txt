@@ -486,13 +486,6 @@ system_ext/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 -system_ext/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
 system_ext/lib/libsensor_calibration.so
 
-# USB - from atoll-user-10-RMX2170_11_A.30-release-keys
-lib/vndk-29/android.hardware.usb@1.0.so:lib/android.hardware.usb@1.0.realme_sm7125.so|967ef105e5b18dc05e799a60a3d25b6c4dc1d7e5
-lib64/vndk-29/android.hardware.usb@1.0.so:lib64/android.hardware.usb@1.0.realme_sm7125.so|f0bc6098e4ba026d0cf952522433c7d479538b77
-vendor/bin/hw/android.hardware.usb@1.0-service:bin/hw/android.hardware.usb@1.0-service.realme_sm7125|66a6e8d502935f79461dcace1e4dd1d5907f9d6f
-vendor/etc/init/android.hardware.usb@1.0-service.rc:etc/init/android.hardware.usb@1.0-service.realme_sm7125.rc|c371c076f2e66a4bd2e5e5680570de1f78949132
-vendor/etc/vintf/manifest/android.hardware.usb@1.0-service.xml:etc/vintf/manifest/android.hardware.usb@1.0-service.realme_sm7125.xml|86534bd699c06749dc4e76fecc07ca45f9a8bdea
-
 # VR
 system_ext/lib/libvr_amb_engine.so
 system_ext/lib/libvr_object_engine.so
