@@ -27,5 +27,4 @@ cc_binary {
         "libhardware",
         "android.hardware.usb@1.0",
     ],
-    proprietary: true,
 }
