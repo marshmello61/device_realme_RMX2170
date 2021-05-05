@@ -56,15 +56,15 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_TAR_BINARY=1
 	export FOX_USE_XZ_UTILS=1
 	export FOX_USE_SED_BINARY=1
-	#export FOX_BUILD_BASH=1
+	export FOX_BUILD_BASH=1
 	
 	#OFR patches
-	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
-	export OF_PATCH_AVB20=1
-	export OF_DONT_PATCH_ENCRYPTED_DEVICE=1 
+	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=0
+	export OF_PATCH_AVB20=0
+	export OF_DONT_PATCH_ENCRYPTED_DEVICE=0 
 	
         #OTA
-        export OF_KEEP_DM_VERITY=1
+        export OF_KEEP_DM_VERITY=0
     #Maintainer name
     export OF_MAINTAINER=NishantKumar6342
     
@@ -77,12 +77,12 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_STATUS_INDENT_LEFT=261
 	export OF_STATUS_INDENT_RIGHT=34
 	export OF_ALLOW_DISABLE_NAVBAR=0
-        export FOX_ADVANCED_SECURITY=1
+        export FOX_ADVANCED_SECURITY=0
         export OF_FLASHLIGHT_ENABLE=1
         export OF_USE_GREEN_LED=0
         export FOX_DELETE_AROMAFM=1
         export FOX_ENABLE_APP_MANAGER=1
-        export OF_RUN_POST_FORMAT_PROCESS=1
+        export OF_RUN_POST_FORMAT_PROCESS=0
         export OF_ENABLE_USB_STORAGE=1
 
 	# let's see what are our build VARs
