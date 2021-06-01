@@ -193,7 +193,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.basic.realme_sm7125
+    android.hardware.usb@1.1-service.typec.realme_sm7125
 
 # Vendor Overlays
 PRODUCT_COPY_FILES += \
