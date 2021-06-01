@@ -1,8 +1,8 @@
 cc_binary {
-    name: "android.hardware.biometrics.fingerprint@2.1-service.realme_sm7125",
+    name: "android.hardware.biometrics.fingerprint@2.1-service.RMX2170",
     defaults: ["hidl_defaults"],
-    init_rc: ["android.hardware.biometrics.fingerprint@2.1-service.realme_sm7125.rc"],
-    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.1-service.realme_sm7125.xml"],
+    init_rc: ["android.hardware.biometrics.fingerprint@2.1-service.RMX2170.rc"],
+    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.1-service.RMX2170.xml"],
     relative_install_path: "hw",
     srcs: [
         "BiometricsFingerprint.cpp",

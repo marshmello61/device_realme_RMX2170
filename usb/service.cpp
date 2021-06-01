@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.usb@1.1-service.typec.realme_sm7125"
+#define LOG_TAG "android.hardware.usb@1.1-service.typec.RMX2170"
 
 #include <hidl/HidlTransportSupport.h>
 #include "Usb.h"

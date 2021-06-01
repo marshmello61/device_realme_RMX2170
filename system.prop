@@ -50,6 +50,7 @@ ro.surface_flinger.wcg_composition_dataspace=143261696
 ro.vendor.display.sensortype=2
 ro.vendor.display.svi=1
 vendor.display.svi.config=1
+vendor.display.svi.config_path=/system/etc/svi_config_206B1.xml
 
 # GBoard Spacing
 ro.com.google.ime.kb_pad_port_b=1

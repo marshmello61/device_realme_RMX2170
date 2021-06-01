@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.1-service.realme_sm7125"
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.1-service.RMX2170"
 
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>
