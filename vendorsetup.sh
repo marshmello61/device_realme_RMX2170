@@ -17,7 +17,7 @@
 #
 # 	Please maintain this if you use this script or any part of it
 #
-FDEVICE="RMX2061"
+FDEVICE="RMX2170"
 #set -o xtrace
 
 fox_get_target_device() {
@@ -39,9 +39,11 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
  	export ALLOW_MISSING_DEPENDENCIES=true
  	
  	#OFR build settings & info
+        export FOX_R11=1
+        export OF_MAINTAINER="Mayur marshmello_61"
 	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 	export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
-	export TARGET_DEVICE_ALT="RMX2061"
+	export TARGET_DEVICE_ALT="RMX2170"
 	export OF_SUPPORT_OZIP_DECRYPTION=1
 	export TW_OZIP_DECRYPT_KEY="0000"
 	export OF_DISABLE_MIUI_SPECIFIC_FEATURES=1

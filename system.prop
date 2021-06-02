@@ -1,5 +1,5 @@
-ro.product.name=RMX2061
-ro.product.product.device=RMX2061
+ro.product.name=RMX2170
+ro.product.product.device=RMX2170
 sys.usb.controller=a600000.dwc3
 sys.usb.rndis.func.name=rndis_bam
 sys.usb.rmnet.func.name=rmnet_bam
@@ -8,3 +8,6 @@ vendor.gatekeeper.disable_spu=true
 ro.adb.secure=0
 ro.boot.avb_version=1.0
 ro.boot.vbmeta.avb_version=1.0
+fbe.metadata.wrappedkey=true
+ro.product.board=atoll
+ro.board.platform=atoll
