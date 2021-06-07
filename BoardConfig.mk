@@ -35,6 +35,7 @@ ENABLE_SCHEDBOOST := true
 # Platform
 TARGET_BOARD_PLATFORM := msmnile
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno640
+QCOM_BOARD_PLATFORMS += msmnile
 
 # OrangeFox Vars
 ALLOW_MISSING_DEPENDENCIES := true
@@ -42,7 +43,7 @@ OF_NO_TREBLE_COMPATIBILITY_CHECK := 1
 
 # Architecture
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-a
+TARGET_ARCH_VARIANT := armv8-2a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := cortex-a76
@@ -64,7 +65,8 @@ BOARD_KERNEL_CMDLINE := \
     msm_rtb.filter=0x237 \
     service_locator.enable=1 \
     androidboot.usbcontroller=a600000.dwc3 \
-    swiotlb=2048 \
+    swiotlb=1 \
+    earlycon=msm_geni_serial,0xa88000 \
     cgroup.memory=nokmem,nosocket \
     androidboot.init_fatal_reboot_target=recovery
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
@@ -89,13 +91,13 @@ BOARD_MKBOOTIMG_ARGS += --second_offset $(BOARD_KERNEL_SECOND_OFFSET) --dtb_offs
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION) --dtb $(TARGET_PREBUILT_DTB)
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := RMX2081,RMX2081L1
+TARGET_OTA_ASSERT_DEVICE := RMX2081L1,RMX2085L1
 
 # Avb
-BOARD_AVB_ENABLE := true
-BOARD_AVB_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
+#BOARD_AVB_ENABLE := true
+#BOARD_AVB_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
+#BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
+#BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144
@@ -107,7 +109,7 @@ BOARD_VBMETA_PARTITION_SIZE := 8192
 BOARD_SUPER_PARTITION_SIZE := 8707375104
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 8703180800
-BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor
+BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext product vendor odm
 
 # System as root
 BOARD_ROOT_EXTRA_FOLDERS := bluetooth dsp firmware persist
@@ -128,31 +130,7 @@ PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
-TW_INCLUDE_FBE_METADATA_DECRYPT := true
-BOARD_USES_METADATA_PARTITION := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
-
-TARGET_RECOVERY_DEVICE_MODULES += \
-    android.hidl.base@1.0 \
-    ashmemd \
-    ashmemd_aidl_interface-cpp \
-    libashmemd_client \
-    libcap \
-    libion \
-    libpcrecpp \
-    libxml2
-
-TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/android.hidl.base@1.0.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libcap.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libpcrecpp.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
- 
-TW_RECOVERY_ADDITIONAL_RELINK_BINARY_FILES += \
-    $(TARGET_OUT_EXECUTABLES)/ashmemd
         
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
@@ -164,6 +142,7 @@ TW_INCLUDE_NTFS_3G := true
 TW_USE_TOOLBOX := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file"
 TW_MAX_BRIGHTNESS := 4095
 TW_DEFAULT_BRIGHTNESS := 2047
 TW_HAS_EDL_MODE := true
@@ -174,3 +153,15 @@ TW_OZIP_DECRYPT_KEY := "1C4C1EA3A12531AE491B21BB31613C11"
 TW_SKIP_COMPATIBILITY_CHECK := true
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+TW_INCLUDE_LIBRESETPROP := true
+TW_INCLUDE_RESETPROP := true 
+TW_INCLUDE_REPACKTOOLS := true
+
+# Excludes
+TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
+
+# Other flags
+TW_NO_LEGACY_PROPS := true
+TW_OVERRIDE_SYSTEM_PROPS := "ro.build.version.sdk" #needed for Android 11 Gapps
+TW_NO_SCREEN_BLANK := true
+TARGET_SUPPORTS_64_BIT_APPS := true

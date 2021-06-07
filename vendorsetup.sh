@@ -37,6 +37,7 @@ fi
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export LC_ALL="C.UTF-8"
  	export ALLOW_MISSING_DEPENDENCIES=true
+ 	export PLATFORM_VERSION=20.1.0
  	
  	#OFR build settings & info
 	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
@@ -62,6 +63,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
 	export OF_PATCH_AVB20=1
 	export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
+	export FOX_BUGGED_AOSP_ARB_WORKAROUND="1546300800"; # Tuesday, January 1, 2019 12:00:00 AM GMT+00:00 
 	
         #OTA
         export OF_KEEP_DM_VERITY=1
@@ -77,13 +79,14 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_STATUS_INDENT_LEFT=261
 	export OF_STATUS_INDENT_RIGHT=34
 	export OF_ALLOW_DISABLE_NAVBAR=0
-        export FOX_ADVANCED_SECURITY=1
+        export FOX_ADVANCED_SECURITY=0
         export OF_FLASHLIGHT_ENABLE=1
         export OF_USE_GREEN_LED=0
         export FOX_DELETE_AROMAFM=1
         export FOX_ENABLE_APP_MANAGER=1
         export OF_RUN_POST_FORMAT_PROCESS=1
-        export OF_ENABLE_USB_STORAGE=0
+        export OF_ENABLE_USB_STORAGE=1
+        export OF_NO_SPLASH_CHANGE=1
 
 	# let's see what are our build VARs
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then

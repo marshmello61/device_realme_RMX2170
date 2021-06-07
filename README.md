@@ -8,35 +8,18 @@ Works:
 - Fastbootd
 - Almost EveryThing
 
-## Compile
+OrangeFox Recovery Project (OFRP) R11 for realme X3 (RMX2081/5)
 
-First Download OFox Sources:
+How to build
+Check OFRP official guide https://wiki.orangefox.tech/en/dev/building
 
-```
-mkdir ~/OrangeFox_10
-cd ~/OrangeFox_10
-rsync rsync://sources.orangefox.download/sources/fox_10.0 . --progress -a
-cd ~/OrangeFox_10/fox_10.0
-```
+Fix decryption on Android 11 (RUI2.0) thanks @logotoy73 and @Ctapchuk
 
-Clone this device repository:
+To provide decryption /data on Android 11 with keymaster@4.0 you need to fix some things like: mounting binderfs
+--Apply these commits to the required repositories to fix the binderfs mount error (now the recovery will not get stuck on the splash screen):
+https://github.com/omnirom/android_system_sepolicy/commit/50c5d731e0aa4098aac293e4024b213b5c445b99
+https://github.com/omnirom/android_system_sepolicy/commit/74affd140396b74840e5dd8018b423ffcbe25a18
+https://github.com/TeamWin/android_bootable_recovery/commit/cd79c90d27941edbda6a92593835aec2a99c2ee9
 
-```
-git clone https://github.com/nishant6342/device_realme_X3_ofox -b fox_11.0 device/realme/RMX2081
-```
-
-Finally execute these:
-
-```
-. build/envsetup.sh
-lunch omni_RMX2081-userdebug
-mka recoveryimage
-```
-
-To test it:
-
-```
-fastboot boot out/target/product/RMX2081/recovery.img
-```
-
-Thanks to @imjyotiraditya and @siddharthbhardwaj , Tree is possible cause of them 
+Next, you need to fully enable decryption in your device tree.
+In order for the decryption /data to work, you need to use the AVB from the stock recovery (TWRP/OFRP cannot provide the required AVB at the moment). To do this, you need to disable the AVB flags in your tree. After compiling the recovery image, you need to flash the stock recovery first and then the custom recovery.
