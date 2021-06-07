@@ -10,3 +10,4 @@ ro.boot.avb_version=1.0
 ro.boot.vbmeta.avb_version=1.0
 ro.product.board=atoll
 ro.board.platform=atoll
+ro.boot.dynamic_partitions=true

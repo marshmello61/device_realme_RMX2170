@@ -50,7 +50,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
 	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
 
-        export OF_SKIP_FBE_DECRYPTION=1
+        #export OF_SKIP_FBE_DECRYPTION=1
 
 	#OFR binary files
 	export FOX_REPLACE_BUSYBOX_PS=1
