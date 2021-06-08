@@ -17,7 +17,7 @@
 #
 # 	Please maintain this if you use this script or any part of it
 #
-FDEVICE="RMX2061"
+FDEVICE="RMX2170"
 #set -o xtrace
 
 fox_get_target_device() {
@@ -42,7 +42,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
  	#OFR build settings & info
 	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 	export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
-	export TARGET_DEVICE_ALT="RMX2061"
+	export TARGET_DEVICE_ALT="RMX2170L1"
 	export OF_SUPPORT_OZIP_DECRYPTION=1
 	export TW_OZIP_DECRYPT_KEY="0000"
 	export OF_DISABLE_MIUI_SPECIFIC_FEATURES=1
@@ -67,12 +67,16 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	#OTA
 	export OF_KEEP_DM_VERITY=1
 
+        #Maintainer
+        export OF_MAINTAINER="Mayur @marshmello_61"
+
 	#OFR settings
+        export FOX_R11=1
 	export OF_SKIP_MULTIUSER_FOLDERS_BACKUP=1
 	export OF_QUICK_BACKUP_LIST="/data;/boot;"
 	export OF_SCREEN_H=2400
 	export OF_STATUS_H=132
-	export OF_STATUS_INDENT_LEFT=261
+	export OF_STATUS_INDENT_LEFT=161
 	export OF_STATUS_INDENT_RIGHT=34
 	export OF_ALLOW_DISABLE_NAVBAR=0
 	export FOX_ADVANCED_SECURITY=1
