@@ -15,7 +15,7 @@
 #
 
 # define hardware platform
-PRODUCT_PLATFORM := msmnile
+PRODUCT_PLATFORM := atoll
 
 # Apex libraries
 PRODUCT_COPY_FILES += \

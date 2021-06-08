@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_RMX2081.mk
+    $(LOCAL_DIR)/omni_RMX2170.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_RMX2081-user \
-    omni_RMX2081-userdebug \
-    omni_RMX2081-eng
+    omni_RMX2170-user \
+    omni_RMX2170-userdebug \
+    omni_RMX2170-eng

@@ -1,6 +1,6 @@
-ro.display.series=Realme X3
-ro.product.board=msmnile
-ro.board.platform=msmnile
+ro.display.series=Realme 7 Pro
+ro.product.board=atoll
+ro.board.platform=atoll
 sys.usb.controller=a600000.dwc3
 sys.usb.rndis.func.name=rndis_bam
 sys.usb.rmnet.func.name=rmnet_bam
