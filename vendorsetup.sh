@@ -68,7 +68,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         #OTA
         export OF_KEEP_DM_VERITY=1
     #Maintainer name
-    export OF_MAINTAINER=NishantKumar6342
+    export OF_MAINTAINER="Mayur @marshmello_61"
     
 	#OFR settings
 	export OF_SKIP_MULTIUSER_FOLDERS_BACKUP=1
@@ -76,7 +76,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	#export OF_SCREEN_H=2400
 	#export OF_STATUS_H=108
 	export OF_STATUS_H=132
-	export OF_STATUS_INDENT_LEFT=261
+	export OF_STATUS_INDENT_LEFT=161
 	export OF_STATUS_INDENT_RIGHT=34
 	export OF_ALLOW_DISABLE_NAVBAR=0
         export FOX_ADVANCED_SECURITY=0
