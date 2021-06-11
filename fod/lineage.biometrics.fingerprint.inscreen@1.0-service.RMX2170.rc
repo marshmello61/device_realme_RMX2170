@@ -10,7 +10,7 @@ on boot
     chown system system /sys/kernel/oppo_display/aod_light_mode_set
     chown system system /proc/touchpanel/DOZE_STATUS
 
-service fingerprint-inscreen-1-0 /system/bin/hw/lineage.biometrics.fingerprint.inscreen@1.0-service.rmx2170
+service fingerprint-inscreen-1-0 /system/bin/hw/lineage.biometrics.fingerprint.inscreen@1.0-service.RMX2170
     interface vendor.lineage.biometrics.fingerprint.inscreen@1.0::IFingerprintInscreen default
     class hal
     user system

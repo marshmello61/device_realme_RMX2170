@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "lineage.touch@1.0-service.rmx2170"
+#define LOG_TAG "lineage.touch@1.0-service.RMX2170"
 
 #include <android-base/logging.h>
 #include <binder/ProcessState.h>

@@ -14,8 +14,8 @@
 // limitations under the License.
 
 cc_binary {
-    name: "lineage.touch@1.0-service.rmx2170",
-    init_rc: ["lineage.touch@1.0-service.rmx2170.rc"],
+    name: "lineage.touch@1.0-service.RMX2170",
+    init_rc: ["lineage.touch@1.0-service.RMX2170.rc"],
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     srcs: [
